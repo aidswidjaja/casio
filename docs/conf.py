@@ -17,17 +17,18 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 import sphinx_rtd_theme
+import sphinx_tabs
 
 # -- Project information -----------------------------------------------------
 
 project = u'fx-docs'
-copyright = u'fx-docs contributors 2020. This documentation is licensed under the Creative-Commons Attribution 4.0 International license, while included code samples are licensed under the MIT License (unless otherwise noted).'
+copyright = u'aidswidjaja and fx-docs contributors 2020. This documentation is licensed under the Creative-Commons Attribution 4.0 International license, while included code samples are licensed under the MIT License (unless otherwise noted).'
 author = u'aidswidjaja'
 
 # The short X.Y version
-version = u''
+version = u'2020.09.27'
 # The full version, including alpha/beta/rc tags
-release = u'stable'
+release = u'development'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,6 +44,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -79,6 +81,12 @@ pygments_style = None
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+
+# html_logo = "_static/temporary-logo.jpg"
+html_theme_options = {
+    'logo_only': False,
+    'display_version': True,
+}
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -162,12 +170,12 @@ texinfo_documents = [
 # -- Options for Epub output -------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = project
+epub_title = 'fx-docs'
 
 # The unique identifier of the text. This can be a ISBN number
 # or the project homepage.
-#
-# epub_identifier = ''
+
+epub_identifier = 'https://casio.readthedocs.io'
 
 # A unique identification for the text.
 #
@@ -180,4 +188,4 @@ epub_exclude_files = ['search.html']
 # -- Extension configuration -------------------------------------------------
 
 def setup (app):
-    app.add_stylesheet('custom.css')
+    app.add_css_file('custom.css')

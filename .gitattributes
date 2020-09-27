@@ -1,0 +1,4 @@
+# Properly detect languages on GitHub
+*.rst linguist-detectable=true
+*.md linguist-detectable=true
+*.bat linguist-detectable=true
